@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plant Care Reminder</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Plant Care Buddy</h1>
+    <button id="add-plant-btn" class="btn">+ Add a New Plant</button>
+  </header>
+
+  <main id="main-content">
+    <!-- Initial Screen -->
+    <section id="initial-screen" class="screen">
+      <div class="weather-info">
+        <p><strong>Current Weather:</strong> <span id="weather-status">Sunny, 72°F</span></p>
+        <p id="weather-comment">Perfect day for watering your indoor plants!</p>
+      </div>
+
+      <div id="plant-list" class="plant-list">
+        <!-- Plants will be dynamically loaded here -->
+      </div>
+
+      <div id="timeline">
+        <h2>Plant Care Timeline</h2>
+        <!-- Timeline will be dynamically loaded here -->
+      </div>
+
+      <div class="quick-actions">
+        <button class="btn" id="care-tips-btn">Care Tips</button>
+        <button class="btn" id="plant-library-btn">Plant Library</button>
+      </div>
+    </section>
+
+    <!-- Add New Plant Screen -->
+    <section id="add-plant-screen" class="screen hidden">
+      <h2>Add Your Plant</h2>
+      <form id="add-plant-form">
+        <div class="form-group">
+          <label for="plant-photo">Upload Image</label>
+          <input type="file" id="plant-photo" class="input-file" accept="image/*">
+        </div>
+        <div class="form-group">
+          <label for="plant-name">Plant Name</label>
+          <input type="text" id="plant-name" class="input-text" required>
+        </div>
+        <div class="form-group">
+          <label for="plant-type">Plant Type</label>
+          <input type="text" id="plant-type" class="input-text" required>
+        </div>
+        <div class="form-group">
+          <label for="watering-schedule">Watering Schedule</label>
+          <select id="watering-schedule" class="input-select">
+            <option value="7">Every 7 Days</option>
+            <option value="3">Every 3 Days</option>
+            <option value="1">Every Day</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="custom-reminder">Custom Reminder</label>
+          <input type="text" id="custom-reminder" class="input-text" placeholder="e.g., Fertilizer every 15 days">
+        </div>
+        <button type="submit" class="btn">Add Plant</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
